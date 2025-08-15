@@ -1,34 +1,372 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* MDX Industrial Machines - Custom Styles following Gilshar Guidelines */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+/* CSS Variables - Gilshar Color System */
+:root {
+  /* Backgrounds - Exact Gilshar Colors */
+  --bg-page: #1a1c1b;                       /* Main black background */
+  --bg-card: #302f2c;                       /* Dark gray card backgrounds */
+  --bg-light: #dfddd6;                      /* Light backgrounds when needed */
+  
+  /* Text - Exact Gilshar Colors */
+  --text-primary: #d9fb06;                  /* Lime green primary text */
+  --text-secondary: #888680;                /* Mid gray supporting text */
+  --text-muted: #302f2c;                    /* Dark gray muted text */
+  --text-inverse: #1a1c1b;                  /* Black text on light backgrounds */
+  --text-white: #ffffff;                    /* Pure white text */
+  
+  /* Borders - Exact Gilshar Colors */
+  --border-light: rgba(63, 72, 22, 0.5);   /* Subtle olive-tinted borders */
+  --border-medium: #3f4816;                 /* Standard olive borders */
+  --border-strong: #888680;                 /* Strong gray borders */
+  
+  /* MAIN BRAND COLORS - Gilshar Brand Colors Only */
+  --brand-primary: #d9fb06;                 /* Primary lime green */
+  --brand-hover: rgba(217, 251, 6, 0.8);   /* Hover state */
+  --brand-active: rgba(217, 251, 6, 0.6);  /* Active/pressed state */
+  
+  /* Supporting Colors - Use sparingly for variety */
+  --secondary-olive: #3f4816;               /* Dark olive green */
+  --secondary-yellow: #f8d47a;              /* Warm yellow accent */
+  --secondary-blue: #0073e6;                /* Blue for links */
+  --neutral-white: white;                   /* Pure white */
+  --neutral-light: #dfddd6;                 /* Light neutral */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
-.App-link {
-    color: #61dafb;
+/* Typography System - Gilshar Typography */
+.brand-display { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 900; 
+  font-size: clamp(3rem, 5.2571rem + 3.0476vw, 6rem); 
+  line-height: 0.9; 
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.heading-1 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 900; 
+  font-size: clamp(2.5rem, 3.2571rem + 2.0476vw, 4rem); 
+  line-height: 0.9; 
+  text-transform: uppercase; 
+  color: var(--text-white);
+}
+
+.heading-2 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 900; 
+  font-size: clamp(2rem, 2.4902rem + 1.0915vw, 3rem); 
+  line-height: 0.9; 
+  text-transform: uppercase; 
+  color: var(--text-white);
+}
+
+.heading-3 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 700; 
+  font-size: clamp(1.5rem, 1.8824rem + 0.7647vw, 2rem); 
+  line-height: 1.1; 
+  color: var(--text-white);
+}
+
+.heading-4 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 600; 
+  font-size: 1.5rem; 
+  line-height: 1.2; 
+  color: var(--text-white);
+}
+
+.heading-5 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 600; 
+  font-size: 1.25rem; 
+  line-height: 1.2; 
+  color: var(--text-white);
+}
+
+.heading-6 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 600; 
+  font-size: 1rem; 
+  line-height: 1.2; 
+  color: var(--text-white);
+}
+
+/* Body text */
+.body-large { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 500; 
+  font-size: 1.25rem; 
+  line-height: 1.5; 
+  color: var(--text-white); 
+}
+
+.body-medium { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 500; 
+  font-size: 1.125rem; 
+  line-height: 1.5; 
+  color: var(--text-white); 
+}
+
+.body-small { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 500; 
+  font-size: 1rem; 
+  line-height: 1.5; 
+  color: var(--text-secondary); 
+}
+
+.caption { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 500; 
+  font-size: 0.875rem; 
+  line-height: 1.4; 
+  color: var(--text-secondary); 
+  text-transform: uppercase; 
+  letter-spacing: 0.1em; 
+}
+
+/* Button Styles - Gilshar Button System */
+.btn-primary {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: 10rem; /* Pill/Capsule - Extremely high corner radius */
+  padding: 1rem 2rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1em;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  color: var(--text-inverse);
+  text-decoration: none;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+  border-radius: 10rem; /* Pill/Capsule - Extremely high corner radius */
+  padding: 1rem 2rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1em;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.btn-secondary:hover {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  transform: scale(1.02);
+  text-decoration: none;
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Navigation Links */
+.nav-link {
+  color: var(--text-white);
+  text-decoration: none;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--brand-primary);
+}
+
+/* Cards */
+.product-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-medium);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-primary);
+  box-shadow: 0 8px 32px rgba(217, 251, 6, 0.1);
+}
+
+.service-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-medium);
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-primary);
+  background: rgba(217, 251, 6, 0.05);
+}
+
+/* Layout System - Gilshar Spacing */
+.container {
+  max-width: 87.5rem; /* 1400px */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.hero-section {
+  background: var(--bg-page);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-in-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.fade-in-delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll reveal animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effects */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-section {
+    padding: 4rem 0;
+    min-height: 80vh;
+  }
+  
+  .section-padding {
+    padding: 4rem 0;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    min-height: 52px;
+  }
+  
+  .brand-display {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-section {
+    padding: 3rem 0;
+  }
+  
+  .section-padding {
+    padding: 3rem 0;
+  }
 }
