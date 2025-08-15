@@ -28,7 +28,7 @@ const Sobre = () => {
 
   const timeline = [
     {
-      year: "2010",
+      year: "2022",
       title: "Fundação da MDX",
       description: "Início das operações com foco em máquinas CNC de precisão."
     },
@@ -69,7 +69,7 @@ const Sobre = () => {
             <p className="body-large text-gray-300 mb-8">
               {companyInfo.description} Fundada em {companyInfo.founded}, somos referência nacional em máquinas industriais de alta precisão.
             </p>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -96,7 +96,7 @@ const Sobre = () => {
                 {companyInfo.mission}
               </p>
             </div>
-            
+
             <div className="text-center lg:text-left">
               <div className="w-16 h-16 bg-lime-400 rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-6">
                 <Award size={32} className="text-black" />
@@ -106,7 +106,7 @@ const Sobre = () => {
                 {companyInfo.vision}
               </p>
             </div>
-            
+
             <div className="text-center lg:text-left">
               <div className="w-16 h-16 bg-lime-400 rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-6">
                 <Users size={32} className="text-black" />
@@ -166,7 +166,7 @@ const Sobre = () => {
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-lime-400"></div>
-              
+
               {timeline.map((item, index) => (
                 <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                   <div className={`w-full max-w-md ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
@@ -180,7 +180,7 @@ const Sobre = () => {
                       <p className="body-small text-gray-300">{item.description}</p>
                     </div>
                   </div>
-                  
+
                   {/* Timeline dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-lime-400 rounded-full border-4 border-black"></div>
                 </div>
@@ -222,7 +222,7 @@ const Sobre = () => {
             <p className="body-large text-gray-300 mb-8">
               Descubra como nossas máquinas industriais podem transformar sua produção com tecnologia de ponta e qualidade comprovada.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/produtos"

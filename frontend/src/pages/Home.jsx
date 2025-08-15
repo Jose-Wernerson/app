@@ -46,15 +46,15 @@ const Home = () => {
               <div className="space-y-6">
                 <div className="inline-flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-full">
                   <Award size={16} className="text-lime-400" />
-                  <span className="caption text-gray-300">15+ ANOS DE EXPERIÊNCIA</span>
+                  <span className="caption text-gray-300">EXPERIÊNCIA COMPROVADA </span>
                 </div>
-                
+
                 <h1 className="brand-display">
                   {companyInfo.tagline}
                 </h1>
-                
+
                 <p className="body-large text-gray-300 max-w-2xl">
-                  Fabricamos máquinas CNC e equipamentos industriais de alta precisão para automação industrial. 
+                  Fabricamos máquinas CNC e equipamentos industriais de alta precisão para automação industrial.
                   Qualidade, inovação e confiabilidade em cada projeto.
                 </p>
               </div>
@@ -86,34 +86,15 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="relative fade-in-delay-1">
-              <div className="relative rounded-2xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                  alt="Máquina CNC MDX em operação"
+            <div className="relative lg:h-[550px] fade-in-delay-1">
+              <div className="lg:absolute lg:top-0 lg:left-0 lg:-translate-x-[-170px] lg:-translate-y-[150px] rounded-2xl overflow-hidden w-full max-w-[600px] mx-auto">
+                <iframe
+                  src="https://www.youtube.com/embed/AchaiSamF0M?autoplay=1&mute=1&controls=0&loop=1&playlist=AchaiSamF0M&modestbranding=1&rel=0"
+                  title="Máquina CNC MDX em operação"
                   className="w-full h-[500px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                
-                {/* Play button overlay */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button className="w-20 h-20 bg-lime-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                    <Play size={32} className="text-black ml-1" />
-                  </button>
-                </div>
-              </div>
-              
-              {/* Floating card */}
-              <div className="absolute -bottom-6 -left-6 bg-gray-900 p-6 rounded-xl border border-gray-700 shadow-2xl">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-lime-400 rounded-full flex items-center justify-center">
-                    <CheckCircle size={24} className="text-black" />
-                  </div>
-                  <div>
-                    <div className="heading-6 text-white">ISO 9001:2015</div>
-                    <div className="caption text-gray-400">Certificação de Qualidade</div>
-                  </div>
-                </div>
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -145,13 +126,13 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="p-6 space-y-4">
                   <div>
                     <h3 className="heading-4 text-white mb-2">{product.name}</h3>
                     <p className="body-small text-gray-300 mb-4">{product.description}</p>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
                       <span className="caption text-gray-400">PRECISÃO</span>
@@ -166,16 +147,16 @@ const Home = () => {
                       </span>
                     </div>
                   </div>
-                  
-                  <div className="pt-4 border-t border-gray-700">
-                    <Link 
+
+                  {/* <div className="pt-4 border-t border-gray-700">
+                    <Link
                       to={`/produtos/${product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`}
                       className="inline-flex items-center text-lime-400 hover:text-lime-300 transition-colors"
                     >
                       Ver Detalhes
                       <ChevronRight size={16} className="ml-1" />
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
@@ -208,10 +189,10 @@ const Home = () => {
                   <div className="w-16 h-16 bg-lime-400 rounded-full flex items-center justify-center mx-auto mb-6">
                     <IconComponent size={32} className="text-black" />
                   </div>
-                  
+
                   <h3 className="heading-5 text-white mb-4">{service.title}</h3>
                   <p className="body-small text-gray-300 mb-6">{service.description}</p>
-                  
+
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center space-x-2">
@@ -252,11 +233,11 @@ const Home = () => {
                     <Star key={i} size={20} className="text-lime-400 fill-current" />
                   ))}
                 </div>
-                
+
                 <p className="body-medium text-gray-300 mb-6 italic">
                   "{testimonial.content}"
                 </p>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-lime-400 rounded-full flex items-center justify-center">
                     <Users size={24} className="text-black" />
@@ -281,7 +262,7 @@ const Home = () => {
             <p className="body-large text-gray-300 mb-8">
               Entre em contato conosco e descubra como nossas máquinas industriais podem revolucionar sua linha de produção com mais precisão, eficiência e qualidade.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={`https://wa.me/${companyInfo.whatsapp.replace(/\D/g, '')}`}
@@ -295,7 +276,7 @@ const Home = () => {
                 Solicitar Orçamento Detalhado
               </Link>
             </div>
-            
+
             {/* Certifications */}
             <div className="mt-16 pt-12 border-t border-gray-800">
               <h3 className="heading-5 text-white mb-8">Certificações e Qualidade</h3>

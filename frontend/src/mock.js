@@ -8,12 +8,12 @@ export const companyInfo = {
   mission: "Desenvolver soluções industriais inovadoras que aumentem a produtividade e precisão dos nossos clientes.",
   vision: "Ser referência nacional em fabricação de máquinas industriais automatizadas.",
   values: ["Inovação", "Qualidade", "Precisão", "Confiabilidade"],
-  founded: "2010",
-  location: "São Paulo, SP - Brasil",
-  phone: "+55 (11) 4567-8900",
-  email: "contato@mdxmaquinas.com.br",
-  whatsapp: "+5511987654321",
-  address: "Rua Industrial, 1500 - Distrito Industrial, São Paulo - SP"
+  founded: "2022",
+  location: "Bauru, SP - Brasil",
+  phone: "+55 (14) 9827-2111",
+  email: "mdxmaquinas@gmail.com",
+  whatsapp: "+5514998442666",
+  address: "Rua riachuelo, 4-8 - vila santa ines, bauru - SP"
 };
 
 export const products = [
@@ -21,7 +21,7 @@ export const products = [
     id: 1,
     name: "CNC AR 06-3D",
     category: "CNC",
-    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: "/img/CNC AR 06-D3.png",
     description: "Máquina CNC de alta precisão para usinagem 3D com controle automatizado avançado.",
     specifications: {
       "Área de Trabalho": "600 x 400 x 200 mm",
@@ -36,38 +36,22 @@ export const products = [
   },
   {
     id: 2,
-    name: "Torno CNC MDX-200",
-    category: "Torno",
-    image: "https://images.unsplash.com/photo-1565025755416-1c3faa50bbe4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
-    description: "Torno CNC robusto para operações de torneamento com alta produtividade.",
+    name: "CNC AR 08-3D",
+    category: "CNC",
+    image: "/img/CNC AR 08-3D.png",
+    description: "Máquina CNC de alta precisão para usinagem 3D com controle automatizado avançado.",
     specifications: {
-      "Diâmetro máximo": "200 mm",
-      "Comprimento": "500 mm",
-      "Precisão": "±0.01 mm",
-      "Rotação": "4.000 RPM",
-      "Potência": "7.5 kW"
+      "Área de Trabalho": "800 x 400 x 200 mm",
+      "Precisão": "±0.005 mm",
+      "Rotação do Spindle": "36.000 RPM",
+      "Potência": "5.5 kW",
+      "Controle": "Sistema CNC FANUC"
     },
-    applications: ["Torneamento", "Roscamento", "Sangramento", "Acabamento"],
-    price: "Consulte",
-    featured: false
-  },
-  {
-    id: 3,
-    name: "Centro de Usinagem VMC-850",
-    category: "Centro de Usinagem",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2125&q=80",
-    description: "Centro de usinagem vertical para operações complexas com troca automática de ferramentas.",
-    specifications: {
-      "Mesa de trabalho": "850 x 450 mm",
-      "Curso X/Y/Z": "850/450/500 mm",
-      "Velocidade": "12.000 RPM",
-      "Ferramentas": "20 posições ATC",
-      "Precisão": "±0.005 mm"
-    },
-    applications: ["Fresamento", "Furação", "Mandrilamento", "Roscamento"],
+    applications: ["Usinagem de precisão", "Prototipagem", "Produção seriada", "Moldes e matrizes"],
     price: "Consulte",
     featured: true
-  }
+  },
+  
 ];
 
 export const services = [
@@ -180,7 +164,7 @@ export const stats = [
     description: "Em todo território nacional"
   },
   {
-    number: "15+",
+    number: "3+",
     label: "Anos de Experiência",
     description: "No mercado industrial"
   },

@@ -15,9 +15,9 @@ const Footer = () => {
   ];
 
   const products = [
-    { name: 'CNC AR 06-3D', path: '/produtos/cnc-ar-06-3d' },
-    { name: 'Torno CNC MDX-200', path: '/produtos/torno-cnc-mdx-200' },
-    { name: 'Centro de Usinagem VMC-850', path: '/produtos/centro-usinagem-vmc-850' }
+    { name: 'CNC AR 06-3D', path: 'href="https://wa.me/5514998442666"' },
+    { name: 'CNC AR 08-3D', path: 'href="https://wa.me/5514998442666"' },
+    // { name: 'Centro de Usinagem VMC-850', path: '/produtos/centro-usinagem-vmc-850' }
   ];
 
   const services = [
@@ -36,9 +36,6 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <Link to="/" className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-lime-400 to-lime-500 rounded-lg flex items-center justify-center">
-                  <span className="text-black font-bold text-xl">M</span>
-                </div>
                 <div>
                   <h3 className="text-xl font-black text-white tracking-tight">
                     {companyInfo.name}
@@ -79,8 +76,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.path} 
+                  <Link
+                    to={link.path}
                     className="body-small text-gray-300 hover:text-lime-400 transition-colors"
                   >
                     {link.name}
@@ -96,8 +93,8 @@ const Footer = () => {
             <ul className="space-y-3 mb-8">
               {products.map((product) => (
                 <li key={product.name}>
-                  <Link 
-                    to={product.path} 
+                  <Link
+                    to={product.path}
                     className="body-small text-gray-300 hover:text-lime-400 transition-colors"
                   >
                     {product.name}
@@ -110,8 +107,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.slice(0, 2).map((service) => (
                 <li key={service.name}>
-                  <Link 
-                    to={service.path} 
+                  <Link
+                    to={service.path}
                     className="body-small text-gray-300 hover:text-lime-400 transition-colors"
                   >
                     {service.name}
@@ -131,27 +128,27 @@ const Footer = () => {
                   {companyInfo.address}
                 </p>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-lime-400 flex-shrink-0" />
-                <a 
+                <a
                   href={`tel:${companyInfo.phone}`}
                   className="body-small text-gray-300 hover:text-lime-400 transition-colors"
                 >
                   {companyInfo.phone}
                 </a>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-lime-400 flex-shrink-0" />
-                <a 
+                <a
                   href={`mailto:${companyInfo.email}`}
                   className="body-small text-gray-300 hover:text-lime-400 transition-colors"
                 >
                   {companyInfo.email}
                 </a>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <Clock size={18} className="text-lime-400 mt-1 flex-shrink-0" />
                 <div className="body-small text-gray-300">
@@ -185,7 +182,7 @@ const Footer = () => {
                 © {currentYear} {companyInfo.fullName}. Todos os direitos reservados.
               </p>
             </div>
-            
+
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <Link to="/politica-privacidade" className="body-small text-gray-400 hover:text-lime-400 transition-colors">
                 Política de Privacidade
@@ -194,7 +191,7 @@ const Footer = () => {
                 Termos de Uso
               </Link>
               <p className="body-small text-gray-400">
-                CNPJ: 12.345.678/0001-90
+                CNPJ: 46.354.264/0001-44
               </p>
             </div>
           </div>

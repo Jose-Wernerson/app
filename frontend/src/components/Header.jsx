@@ -25,9 +25,8 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/95 backdrop-blur-sm border-b border-gray-800' : 'bg-transparent'
-    }`}>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 backdrop-blur-sm border-b border-gray-800' : 'bg-transparent'
+      }`}>
       {/* Top bar with contact info */}
       <div className="hidden md:block bg-gray-900 border-b border-gray-800">
         <div className="container">
@@ -54,9 +53,6 @@ const Header = () => {
         <nav className="flex items-center justify-between py-4 md:py-6">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-lime-400 to-lime-500 rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-xl">M</span>
-            </div>
             <div>
               <h1 className="text-2xl font-black text-white tracking-tight">
                 {companyInfo.name}
@@ -73,11 +69,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`nav-link transition-all duration-300 ${
-                  location.pathname === item.path 
-                    ? 'text-lime-400' 
+                className={`nav-link transition-all duration-300 ${location.pathname === item.path
+                    ? 'text-lime-400'
                     : 'text-white hover:text-lime-400'
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -111,11 +106,10 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`nav-link text-left ${
-                    location.pathname === item.path 
-                      ? 'text-lime-400' 
+                  className={`nav-link text-left ${location.pathname === item.path
+                      ? 'text-lime-400'
                       : 'text-white hover:text-lime-400'
-                  }`}
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
